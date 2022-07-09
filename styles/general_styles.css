@@ -1,0 +1,188 @@
+body {
+	background-color: black;
+}
+
+.html_unload {
+	opacity: 0;
+	transition: all 0.4s ease-in-out;
+}
+
+.html_load {
+	opacity: 1;
+	transition: all 0.4s ease-out;
+}
+
+a,p,span {
+	color: white;
+	font-size: 20px;
+}
+
+/* Лого дед кора */
+@keyframes blur_hover {
+	from {
+		filter: blur(10px);
+	}
+	to {
+		filter: blur(0px);
+	}
+}
+
+.dead_core_logo {
+	filter: blur(8px);
+	transition: filter,border-radius 0.4s ease-in-out;
+	border-radius: 50%;
+	position: absolute;
+	left: 98%;
+	top: 4%;
+	transform: translate(-50%, -50%) scale(0.2);
+}
+.dead_core_logo:hover {
+	filter: blur(0px);
+	border-radius: 40%;
+}
+
+
+/* Навигация по сайту */
+
+.topnav {
+  background-color: black;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-size: 17px;
+  user-select: none;
+
+}
+
+
+.topnav a:hover {
+  background-color: darkblue;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: darkviolet;
+  color: white;
+}
+
+/* Обо мне about */
+
+
+.link {
+	color: #0000ff;
+}
+
+
+
+
+.dead_text {
+  font-size: 5em;
+  text-align: center;
+  position: absolute;
+  font-family: monospace;
+	font: monospace;
+	left: 50%;
+	top: 45%;
+	transform: translate(-50%, -50%);
+	opacity: 0.33;
+	animation: rainbow 10s infinite linear;
+	width: 20%;
+	user-select: none;
+	transition: all 0.5s ease-in-out;
+}
+
+.rainbow {
+		animation: rainbow 5.5s linear;
+		animation-iteration-count: infinite;
+}
+
+
+@keyframes rainbow {
+		100%,0%{color: rgb(255,0,0);}
+		8%{color: rgb(255,127,0);}
+		16%{color: rgb(255,255,0);}
+		25%{color: rgb(127,255,0);}
+		33%{color: rgb(0,255,0);}
+		41%{color: rgb(0,255,127);}
+		50%{color: rgb(0,255,255);}
+		58%{color: rgb(0,127,255);}
+		66%{color: rgb(0,0,255);}
+		75%{color: rgb(127,0,255);}
+		83%{color: rgb(255,0,255);}
+		91%{color: rgb(255,0,127);}
+}
+
+
+/* Текстовые блоки */
+
+.faq {
+	text-align: left;
+	border: 1px solid white;
+	width: 38%;
+	background-color: transparent;
+	transition: width 0.3s ease-in-out;
+}
+
+
+
+.select_anim_faq {
+	text-align: left;
+	border:1px solid white;
+	width: 39%;
+	background-color: rgba(20, 20, 20, 1.0);
+}
+
+.cheats {
+	text-align: left;
+	border: 1px solid white;
+	width: 38%;
+	background-color: transparent;
+	transition: width 0.3s ease-in-out;
+}
+
+.select_anim_cheats {
+	text-align: left;
+	border: 1px solid white;
+	width: 39%;
+	background-color: rgba(20, 20, 20, 1.0);
+}
+
+
+.links {
+	text-align: left;
+	border: 1px solid white;
+	width: 38%;
+	background-color: transparent;
+	transition: width 0.3s ease-in-out;
+}
+
+.select_anim_links {
+	text-align: left;
+	border: 1px solid white;
+	width: 39%;
+	background-color: rgba(20, 20, 20, 1.0);
+
+}
+
+.news {
+	text-align: left;
+	height: 250px;
+	border: 1px solid white;
+	width: 38%;
+	background-color: transparent;
+	transition: width 0.3s ease-in-out;
+}
+
+.select_anim_news {
+	text-align: left;
+	border: 1px solid white;
+	width: 39%;
+	background-color: rgba(20, 20, 20, 1.0);
+
+}

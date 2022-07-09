@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html id="html">
+<head>
+	<meta charset="utf-8">
+	<title>General page</title>
+	<link rel="stylesheet" type="text/css" href="../styles/general_styles.css">
+	<link rel="icon" type="image/x-icon" href="/images/dead-core-logo.png">
+</head>
+
+<script>
+function select_anim(element) {
+
+	if(element=='faq') {
+		document.getElementById(element).classList.add('select_anim_faq');
+		document.getElementById('sel1').classList.add('active');// добавление класса active к 1 слоту
+		document.getElementById('sel2').classList.remove('active');
+		document.getElementById('sel3').classList.remove('active');
+		document.getElementById('sel4').classList.remove('active');
+		setTimeout(function() {document.getElementById(element).classList.remove('select_anim_faq');},400)
+	}
+	if(element=='cheats') {
+		document.getElementById(element).classList.add('select_anim_cheats');
+		document.getElementById('sel2').classList.add('active');// добавление класса active к 2 слоту
+		document.getElementById('sel1').classList.remove('active');
+		document.getElementById('sel3').classList.remove('active');
+		document.getElementById('sel4').classList.remove('active');
+		setTimeout(function() {document.getElementById(element).classList.remove('select_anim_cheats');},400)
+	}
+	if(element=='links') {
+		document.getElementById(element).classList.add('select_anim_links');
+		document.getElementById('sel3').classList.add('active');// добавление класса active к 3 слоту
+		document.getElementById('sel2').classList.remove('active');
+		document.getElementById('sel1').classList.remove('active');
+		document.getElementById('sel4').classList.remove('active');
+		setTimeout(function() {document.getElementById(element).classList.remove('select_anim_links');},400)
+	}
+	if(element=='news') {
+		document.getElementById(element).classList.add('select_anim_news');
+		document.getElementById('sel4').classList.add('active');// добавление класса active к 3 слоту
+		document.getElementById('sel2').classList.remove('active');
+		document.getElementById('sel1').classList.remove('active');
+		document.getElementById('sel3').classList.remove('active');
+		setTimeout(function() {document.getElementById(element).classList.remove('select_anim_news');},400)
+
+	}
+}
+
+function why_click() {
+	document.getElementById("dead_core_text").style.opacity = "0.00";
+	document.getElementById("dead_core_text").style.left = "70%";
+
+
+	setTimeout(function() {
+		document.getElementById("dead_core_text").style.opacity = "0.33";
+		document.getElementById('dead_core_text').innerHTML = 'Зачем на текст нажал?';
+	},300)
+
+
+
+	setTimeout(function() {
+		document.getElementById("dead_core_text").style.opacity = "0.33";
+		document.getElementById('dead_core_text').innerHTML = 'DEAD CORE';
+		document.getElementById("dead_core_text").style.left = "50%";
+	},2000)
+}
+
+function refreshTime() {
+	var currentdate = new Date();
+	if(currentdate.getSeconds().length==1) {
+		var datetime = currentdate.getHours() + ":" + currentdate.getMinutes() + ":" +currentdate.getSeconds();
+	}
+	var datetime = currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds();
+	document.getElementById('time').innerHTML = datetime
+}
+setInterval(refreshTime, 1000);
+
+window.onload = function() {
+	refreshTime()
+	var today = new Date();
+	var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+	document.getElementById("date").innerHTML = date;
+	document.getElementById('html').classList.add('html_load')
+}
+
+var konamicode = [38,38,40,40,37,39,37,39,66,65];
+var kc=0;
+
+  function checker(){
+  	if (kc==10){
+  		kc=0;
+  		window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+  		setTimeout(function() {
+  			alert('Зачем ты это написал?W')
+  		},400)
+
+  }
+}
+
+function keyUp(e) {
+  var keynum;
+   if (window.event){keynum = event.keyCode;}
+    else if (e.which){keynum = e.which;}
+      for (i=0;i<222;i++){
+        var kx=konamicode[kc];
+        if (keynum==i){
+      if (i!=kx){kc=0;} else {kc++;}
+     }
+   }
+  checker();
+  }
+
+document.onkeyup = keyUp;
+
+
+</script>
+
+
+<body>
+	<!-- Навигация по сайту -->
+	<div class="topnav">
+		<a id="sel1" class="active" onmouseover ="select_anim('faq')">FAQ</a>
+		<a id="sel2" onmouseover="select_anim('cheats')">Cheats</a>
+		<a id="sel3" onmouseover ="select_anim('links')">Links</a>
+		<a id="sel4" onmouseover ="select_anim('news')">News</a>
+	</div>
+	<!-- Лого dead core с блюром -->
+	<a href=".."><img class="dead_core_logo" src="/images/dead-core-logo.png"></a>
+	<!-- Текст -->
+
+	<div class="faq" id='faq'> <!-- FAQ -->
+<p>
+FAQ </br> </br>
+
+F: Что такое Дедовская-Кора? </br>
+Q: Это клан в Minecraft, и мы в частности играем с лично нашими переделанными читами! </br>
+F: Зачем этот сайт? </br>
+Q: Сделали сайт чтобы изучить язык программирование и просто по рофлу! </br>
+F: Почему именно DeadCore? </br>
+Q: Я придумал это название когда убил свой линукс</p>
+	</div>
+
+	<div class="cheats" id='cheats'><!-- Cheats -->
+		<p>Cheats<p>
+		<p>
+Обычно мы используем чит модифицированый RusherHack и Pyro :) </br> </br>
+А если мы играем в 1.8 то используем LiquidBounce+ </br>
+</p><a style="color: aqua;text-decoration: none" href="https://www.reddit.com/r/lumat/">Наш реддит с читами</a>
+	</div>
+	<div class="links" id="links"><!-- Links -->
+		<p>Links</p><p>
+
+<a>Наш </a><a href="https://bit.ly/312UV3E" style="color: aqua;text-decoration: none">дискорд сервер</a><p>
+
+Мой ютуб <a style="color: aqua;text-decoration: none" href="https://www.youtube.com/channel/UC5LQvkGMaczUnQJsKgd1-3w">
+
+Purpl3</a> (он есть на старт странице) </br>
+Ютуб <a style="color: aqua;text-decoration: none" href="https://www.youtube.com/channel/UC1VzH3XZmKOQ9y9bnnG3uHg">Rawitti</a><a> (он также есть на старт странице)</a></p></br></div>
+
+	<div class="news" id="news">
+		<p>Сегодня: <strong><a id="date"></a></p></strong>
+		<p>Время: <strong><a id="time"></a></strong></p>
+		<center><a>23-04-2022: Крутая вторая новость сайта</a></center>
+		<center><a>22-04-2022: Первая новость сайта!</a></center>
+	</div>
+	<div class='dead_text rainbow' id='dead_core_text' onclick="why_click()">DEAD CORE</div>
+
+	<div>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+body {
+  text-align: center;
+  background-image: url('https://i.redd.it/e1569zmb7t161.png');
+  height: 100vh;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0, 0, 0); 
+}
+
+@keyframes rainbow_animation {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+/* Кнопка Dead Core */
+.button {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  cursor: pointer;
+  margin: auto;
+  transition: 0.5s ease-in-out;
+  padding: 10px;
+  position: absolute;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+
+.button:hover span {
+    padding-right: 20px;
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 7s linear infinite;
+    background-size: 400% 100%;
+
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+  color: #FFFFFF;
+}
+/* Конец кнопки Dead Core */
+
+/* Шапка */
+
+@keyframes header {
+    10% {
+        font-family: sans-serif;
+
+    }
+    20% {
+        font-family: serif;
+        font-weight: bolder;
+    }
+    30% {
+        font-family: Georgia, serif;
+        font-weight: lighter;
+    }
+    40% {
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+    50% {
+        font-family: monospace;
+    }
+}
+
+
+.header {
+    color: white;
+    font-size: 200px;
+    animation: header 12s linear infinite;
+    transition: 0.5s ease-in-out;
+    left: 50%;
+    top: 10%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.header:hover {
+  animation: hover 2s forwards linear;
+  background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: 0.5s ease-in-out;
+  animation: rainbow_animation 10s linear forwards, header 12s linear infinite;
+}
+
+/* Соц сети */
+
+.social-youtube-rawitti {position: absolute;left: 0;bottom: 0;background-color: Transparent;border: none;color: #FFFFFF;text-align: center;font-size: 28px;padding: 10px;width: 100px;cursor: pointer;margin: auto;}
+.social-youtube-rawitti:hover span {background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);-webkit-background-clip: text;background-clip: text;color: transparent;animation: rainbow_animation 7s linear infinite;background-size: 400% 100%;}
+
+.social-youtube-purpl3 {position: absolute;right: -0;bottom: 0;background-color: Transparent;border: none;color: #FFFFFF;text-align: center;font-size: 28px;padding: 10px;width: 100px;cursor: pointer;margin: auto;}
+.social-youtube-purpl3:hover span {background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);-webkit-background-clip: text;background-clip: text;color: transparent;animation: rainbow_animation 7s linear infinite;background-size: 400% 100%;}
+
+.social-youtube-reddit {
+    left: 50%;
+    top: 95%;
+    transform: translate(-50%);
+    position: absolute;
+    background-color: Transparent;
+    border: none;
+    color: #FFFFFF;
+    font-size: 28px;
+    cursor: pointer;
+}
+.social-youtube-reddit:hover span {background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 7s linear infinite;
+    background-size: 400% 100%;
+}
+
+

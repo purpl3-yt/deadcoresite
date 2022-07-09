@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel='stylesheet' type='text/css' href='../styles/404_styles.css'>
+	<meta charset='utf-8'>
+	<title>Error 404</title>
+</head>
+
+<script type='text/javascript'>
+	function random_number() {
+		var random_num = Math.floor(Math.random() * 10);
+		document.getElementById('random_num').innerHTML = 'Твое число: '+Math.floor(Math.random() * 100) + 1;
+	}
+	
+	function animation() {
+		const element = document.getElementById("image");
+		var s = document.getElementById('select_animation');
+		var animation = s.options[s.selectedIndex].value;
+    	if(animation == 'border_size') {
+        	element.className = "animation_image";
+        }
+		else if(animation == 'blur') {
+			element.className = "animation_image_blur"
+		}		
+
+		else if (animation == 'rotate') {
+			element.className = "animation_image_rotate"
+		}
+		
+	}
+
+
+
+	window.onload = function() {
+  		animation();
+  	}
+
+</script>
+
+
+
+<body>
+	<h1 class='header'>Ты наверное захотел зайти на запрещенную страницу?<br> Ну ладно посмотри мои JS и CSS проекты</br></h1>
+	<div class='experements'>
+		<p>Простая генерация цифр, нажми на кнопочку</p>
+		<p id='random_num'>Твое число: <script>random_number()</script> </p>
+		<button class='button_yes' onclick='random_number()'><span>Генерировать</span></button>
+
+		<p id='animation'>Анимация наведись на иконку --></p>
+		<select class="select_animation" name="Select" id="select_animation" onclick="animation()">
+			<option value="border_size" selected>Анимация border и size</option>
+			<option value="blur">Анимация Blur</option>
+			<option value="rotate">Анимация Rotate</option>
+		</select>
+		<h1> </h1>
+		<img class='animation_image' id="image" src="../images/dead-core-logo.png">
+		<a>Если не хочешь тут быть иди на </a><a href="../html/site.html">главную страницу</a>
+	</div>
+	
+
+</body>
+</html>

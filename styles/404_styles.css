@@ -1,0 +1,99 @@
+body {
+	background: repeat url('https://hdwallpaperim.com/wp-content/uploads/2017/08/24/98616-minimalism-404_Not_Found-748x421.jpg');
+	background-position: center;
+	background-position: top;
+	background-color: black;
+}
+
+/* Хеадер */
+
+.header {
+	font-family: serif;
+	text-align: center;
+}
+
+/* Белый цвет для текстов */
+
+p,h1,div {
+	color: white;
+}
+
+/* Експеременты */
+
+.experements {
+	border: dashed;
+  	margin: auto;
+	width: 30%;
+	padding: 10px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+.experements > button {
+	background-color: transparent;
+	cursor: pointer;
+  	margin: auto;
+  	color: white;
+}
+
+.experements > img{
+	transform: translate(-50%, -50%);
+	transform: scale(0.4);
+	left: 50%;
+	top: 0%;
+}
+	
+/* Разные анимации */
+
+.animation_image {
+	position: absolute;
+	border-radius: 35%;
+	transition: 0.3s;
+	transform: scale(0.4);
+}
+
+.animation_image:hover {
+	border-radius: 10%;
+	transform: scale(0.5);
+}
+
+
+
+.animation_image_blur {
+	position: absolute;
+	border-radius: 35%;
+	transform: scale(0.4);
+	transition: 0.3s;
+	filter: blur(5px);
+}
+
+.animation_image_blur:hover {
+	position: absolute;
+	filter: blur(0px);
+	border-radius: 10%;
+	transform: scale(0.5);
+}
+
+.animation_image_rotate {
+	position: absolute;
+	border-radius: 35%;
+	transition: 0.3s;
+	transform: scale(0.4);
+	transform: rotate(0deg);
+}
+
+.animation_image_rotate:hover {
+	position: absolute;
+	border-radius: 10%;
+	transform: scale(0.4);
+	transform: rotate(20deg);
+
+}
+
+.select_animation {
+	background-color: transparent;
+ 	color: white;
+}
